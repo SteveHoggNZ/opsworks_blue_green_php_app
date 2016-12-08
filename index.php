@@ -6,11 +6,11 @@ include "./config.php";
 ?>
 <html>
   <head>
-    <title>OpsWorks Blue Green Test <?=$version?></title>
+    <title>OpsWorks Blue Green Test <?php echo $version?></title>
   </head>
   <body>
-    <h1>OpsWorks Blue Green Test <?=$version?></h1>
-    <h2><?=$_SERVER["SERVER_NAME"] . " " . date("c")?></h2>
+    <h1>OpsWorks Blue Green Test <?php echo $version?></h1>
+    <h3><?php echo `hostname` . " | " . $_SERVER["SERVER_ADDR"] . " | " . date("c")?></h3>
 <?php
 try {
   $mysqli = new mysqli($db_host, $db_user, $db_password, $db_name);
