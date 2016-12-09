@@ -1,5 +1,5 @@
 <?php
-$version = "v2.4";
+$version = "v2.5";
 
 date_default_timezone_set('UTC');
 include "./config.php";
